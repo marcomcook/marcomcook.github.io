@@ -1,0 +1,106 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light Theme */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a, nav button {
+  margin: 0 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.projects li,
+.publications li {
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #111;
+  color: #ddd;
+}
+
+body.dark a {
+  color: #88caff;
+}
+
+body.dark footer {
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
