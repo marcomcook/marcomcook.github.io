@@ -8,24 +8,26 @@
 </head>
 <body>
   <header>
-    <h1>Dr. Your Name</h1>
-    <p>Researcher | Lecturer | [Your Field]</p>
+    <h1>Dr. Marco Cook</h1>
+    <p>Researcher | Cyber-Security</p>
     <nav>
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
       <a href="cv.pdf" target="_blank">CV</a>
-      <button id="toggle-mode">🌓</button>
+      <button id="toggle-mode" title="Toggle dark mode">🌓</button>
     </nav>
   </header>
 
   <main>
     <section id="about">
+      <div class="profile-container">
+        <img src="profile.jpg" alt="Profile photo" class="profile-pic" />
+      </div>
       <h2>About Me</h2>
       <p>
-        I am a [Your Title] at [Your Institution]. My research focuses on [keywords]. 
-        I am passionate about [something academic and personal].
+        I am a [Your Title] at [Your Institution]. My research focuses on [keywords].
       </p>
     </section>
 
@@ -34,33 +36,23 @@
       <ul class="projects">
         <li>
           <h3>Project Title</h3>
-          <p>Brief description. <a href="#">Read more</a></p>
-        </li>
-        <li>
-          <h3>Another Research Area</h3>
-          <p>Summary of another academic interest or study.</p>
+          <p>Description. <a href="#">More</a></p>
         </li>
       </ul>
     </section>
 
     <section id="publications">
       <h2>Publications</h2>
-      <ul class="publications">
-        <li>
-          <strong>Your Name</strong>, Co-author. "<em>Title of Paper</em>." Journal Name, 2024.
-          [<a href="#">PDF</a>] [<a href="#">DOI</a>]
-        </li>
-        <li>
-          <strong>Your Name</strong>. "<em>Another Research Paper</em>." Conference Name, 2023.
-        </li>
-        <!-- Add more here -->
+      <input type="text" id="pub-search" placeholder="Search by keyword or year…" />
+      <ul id="pub-list" class="publications">
+        <!-- Publications will be dynamically loaded -->
       </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: your.email@university.edu</p>
-      <p>GitHub / Scholar / LinkedIn: <a href="#">Link</a></p>
+      <p><a href="#">Google Scholar</a> · <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
     </section>
   </main>
 
@@ -68,12 +60,7 @@
     <p>© 2025 Dr. Your Name</p>
   </footer>
 
-  <script>
-    // Dark mode toggle
-    const button = document.getElementById('toggle-mode');
-    button.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bibtex-parse-js@1.0.1/bibtexParse.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
