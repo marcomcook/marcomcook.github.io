@@ -8,11 +8,41 @@
 /* Light Theme (lighter background) */
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #f0f2f5;
+  background: #f8f8f8;
   color: #222;
   line-height: 1.6;
   padding: 2rem;
   transition: background 0.3s, color 0.3s;
+}
+
+/*section:nth-of-type(odd) {*/
+/*  background-color: #f9f9f9; !* Light gray *!*/
+/*}*/
+
+/*section:nth-of-type(even) {*/
+/*  background-color: #ffffff; !* White *!*/
+/*}*/
+
+/*body.dark section:nth-of-type(odd) {*/
+/*  background-color: #1e1e1e; !* Dark gray for dark mode *!*/
+/*}*/
+
+/*body.dark section:nth-of-type(even) {*/
+/*  background-color: #121212; !* Slightly darker *!*/
+/*}*/
+
+section {
+  padding: 2rem;
+  border-bottom: none; /* Remove the old border if you had one */
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.about-me-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 4fr 1fr;
+  column-gap: 5px;
 }
 
 a {
