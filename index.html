@@ -5,16 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dr. Your Name</title>
   <link rel="stylesheet" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
+<script>
+    function fetchJSONData() {
+        fetch('publications_meta_data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => console.log(data))
+            .catch(error => console.error('Failed to fetch data:', error));
+    }
+    fetchJSONData();
+</script>
   <header>
     <h1>Dr. Marco Cook</h1>
-    <p>Researcher | Cyber-Security | University of Glasgow</p>
     <nav>
 <!--      <a href="#about">About</a>-->
-      <a href="#research">Research</a>
+<!--      <a href="#research">Research</a>-->
       <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+      <a href="#projects">Projects</a>
+        <a href="#activities">Scholarly Activities</a>
       <a href="cv.pdf" target="_blank">CV</a>
       <button id="toggle-mode" title="Toggle dark mode">🌓</button>
     </nav>
@@ -22,39 +40,106 @@
 
   <main>
 <section id="about">
-  <h2>About Me</h2>
-    <div class="about-me-container">
+    <h2 class="sectionheading">About Me</h2>
+    <p class="sectionheader">Research Associate | Cyber-Security | University of Glasgow</p><br>
+<div class="about-me-container">
     <div class="profile-wrapper">
         <img src="profile.jpg" alt="Profile photo" class="profile-pic" />
     </div>
-
   <p>
       I am a Postdoctoral Research Associate in the <a href="https://www.gla.ac.uk/research/az/cyber-defence-lab/" target="_blank">Glasgow Cyber Defence Lab (GCDL)</a>
-      and a member of the <a href="https://www.gla.ac.uk/research/az/netlab/" target="_blank">Networked Systems Research Lab (Netlab)</a> at the University of Glasgow.
+      and a member of the <a href="https://www.gla.ac.uk/research/az/netlab/" target="_blank">Networked Systems Research Lab (Netlab)</a> in the School of Computing Science
+      at the University of Glasgow.
 <br><br>
-      My research focuses on cyber-security and digital resilience, including anomaly detection, digital forensics, and their application to
-      Critical National Infrastructure (CNI) and networked Industrial Control Systems (ICS).
+      My research focuses on cyber-security and digital resilience, including anomaly detection, data provenance, digital forensics, and their application to
+      Critical National Infrastructure (CNI) and networked Industrial Control Systems (ICS). I have a particular interst in fingerprinting approaches,
+       normal behaviour profiling and graph-based approaches.
   </p>
+</div>
 
-    </div>
 </section>
 
-    <section id="research">
-      <h2>Research & Projects</h2>
+    <section id="news">
+      <h2 class="sectionheading">Latest News</h2>
       <ul class="projects">
-        <li>
-          <h3>Project Title</h3>
-          <p>Description. <a href="#">More</a></p>
-        </li>
+       <li>
+           <-- Add news here -->
+       </li>
       </ul>
     </section>
 
     <section id="publications">
-      <h2>Publications</h2>
-      <input type="text" id="pub-search" placeholder="Search by keyword or year…" />
-      <ul id="pub-list" class="publications">
-        <!-- Publications will be dynamically loaded -->
-      </ul>
+        <h2 class="sectionheading">Recent Publications</h2>
+<!--        <p class="sectionheader"><a href="https://scholar.google.com/citations?user=5njYdN8AAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> | <a href="https://www.gla.ac.uk/schools/computing/staff/marcocook/#publications" target="_blank">University Profile</a></p><br>-->
+        <ol class="publications-list">
+            <li class="publication-item">
+                <a class="publication-title" href="#modal1">PLCPrint: Fingerprinting Memory Attacks in Programmable Logic Controllers</a>
+
+                <a href="Publications/papers/plcprint_2023.pdf" class="academic-button pdf">PDF</a>
+                <button class="academic-button bibtex" onclick="generateBibtex()">BibTeX</button>
+                <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
+                <div class="meta-line">
+                    <i><img src="images/journal.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> IEEE Transactions on Information Forensics and Security <span class="publication-date">2023</span>
+                </div>
+                <div class="meta-line">
+                    <i><img src="images/authors.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> Marco M. Cook, Angelos K. Marnerides, Dimitrios Pezaros
+                </div>
+            </li>
+
+            <li class="publication-item">
+                <a class="publication-title" href="#modal2">Artefact Provenance Graphs for Anomaly Inference in Industrial Control Systems</a>
+                <a href="Publications/papers/artefactprovenance_2025.pdf" class="academic-button pdf">PDF</a>
+<!--                <button class="academic-button bibtex" onclick="location.href='#modal3">BibTeX</button>
+-->
+
+                <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
+                <div class="meta-line">
+                    <i><img src="images/conference.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> IFIP International Conference on ICT Systems Security and Privacy Protection <span class="publication-date">2025</span>
+                </div>
+                <div class="meta-line">
+                    <i><img src="images/authors.png" style="width: 28px; height: 28px; margin-top: 7px;"></i> Marco M. Cook, Dimitrios Pezaros
+                </div>
+            </li>
+        </ol>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
+                <h2>Abstract:</h2>
+                <p>Programmable Logic Controllers (PLCs) constitute
+                    the functioning basis of Industrial Control Systems (ICS) and
+                    hence are often a focal point for attackers to exploit. Previous
+                    attacks have seen PLC memory maliciously altered in order to
+                    disrupt the underlying physical process. Different types of memory attack can cause a similar impact on the PLC’s operation and
+                    result in indistinguishable physical manifestations. Consequently,
+                    delays in triaging attacks through digital forensic practices can
+                    induce significant financial loss, physical damage to the infrastructure, and degradation of safety. In this work, we propose
+                    PLCPrint, a novel vendor-independent fingerprinting approach
+                    that utilises PLC memory artefacts to perform detection and
+                    classification of memory attacks. PLCPrint uses PLC memory
+                    register mapping, a novel method exploiting the relationship
+                    between PLC registers and memory artefacts including the PLC
+                    application code. Through this, registers are assigned a Mapping
+                    Condition (MC) to indicate how they exist within the PLC memory artefacts. We evaluate the performance of PLCPrint over
+                    realistic emulations conducted at a real testbed emulating water
+                    filtration and distribution. Through PLCPrint we depict how MC
+                    deviations are utilised within supervised learning schemes such as
+                    to adequately classify PLC memory attacks with high accuracy
+                    performance. In general, we demonstrate that PLCPrint fills
+                    the gap in the context of attack technique triaging since this has
+                    been a missing element within current ICS forensics schemes.</p>
+                <!-- more modal content -->
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
+                <h2>Abstract:</h2>
+                <p>The digitalisation of Critical National Infrastructure (CNI) to improve automation has resulted in the underlying Industrial Control Systems (ICS) becoming increasingly interconnected. This sudden connectivity combined with a lack of inherent security controls in ICS components such as Programmable Logic Controllers (PLCs) has enabled sophisticated cyber adversaries to disrupt physical processes. Detecting and analysing attacks is therefore essential for ICS operators to ensure the continuous availability of critical systems. However, existing research has made limited advances into data provenance for anomalies occurring in ICS networks. This is fundamental for enabling rapid triaging of cyber incidents. In this paper, we introduce a novel vendor-independent approach for representing the behaviour of PLC states using graphs for anomaly detection. Through the modelling of dependencies between memory and network data artefacts, we facilitate the data provenance of different types of PLC attack scenarios using graph-based metrics as a generalisable feature set for accurate state and node classification. We evaluate our approach using two physical ICS testbeds with real PLCs to demonstrate generalisability across industrial vendors and environments. The results reveal high, achieving up to 98.9% and 98.7% accuracy for anomalous state and node detection, respectively.
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -64,11 +149,40 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Dr. Your Name</p>
-  </footer>
+<!--  <footer>-->
+<!--    <p>© 2025 Dr. Your Name</p>-->
+<!--  </footer>-->
 
   <script src="https://cdn.jsdelivr.net/npm/bibtex-parse-js@1.0.1/bibtexParse.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      document.querySelectorAll('.publication-title').forEach(link => {
+          link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const modalId = this.getAttribute('href');
+              document.querySelector(modalId).style.display = 'block';
+          });
+      });
+
+      window.onclick = function(event) {
+          if (event.target.classList.contains('modal')) {
+              event.target.style.display = 'none';
+          }
+      }
+  </script>
+
+<!--JSON Publication File-->
+  <script>
+      // Load the JSON file
+      const jsonData = JSON.parse(document.getElementById('publication-data').textContent);
+      const list = document.getElementById('publication-list');
+
+      jsonData.publications.forEach(pub => {
+          const listItem = document.createElement('li');
+          listItem.textContent = pub.title;
+          list.appendChild(listItem);
+      });
+  </script>
 </body>
 </html>
