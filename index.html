@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dr. Your Name</title>
+  <title>Marco Cook</title>
   <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="academicons.css"/>
+    <link rel="stylesheet" href="academicons.min.css"/>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href=
+            "https://cdnjs.cloudflare.co
 </head>
 <body>
 <script>
@@ -25,8 +31,9 @@
     }
     fetchJSONData();
 </script>
+<script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
   <header>
-    <h1>Dr. Marco Cook</h1>
+<!--    <h1>Dr. Marco Cook</h1>-->
     <nav>
 <!--      <a href="#about">About</a>-->
 <!--      <a href="#research">Research</a>-->
@@ -38,7 +45,7 @@
     </nav>
   </header>
 
-  <main>
+<!--  <main>-->
 <section id="about">
     <h2 class="sectionheading">About Me</h2>
     <p class="sectionheader">Research Associate | Cyber-Security | University of Glasgow</p><br>
@@ -46,6 +53,7 @@
     <div class="profile-wrapper">
         <img src="profile.jpg" alt="Profile photo" class="profile-pic" />
     </div>
+
   <p>
       I am a Postdoctoral Research Associate in the <a href="https://www.gla.ac.uk/research/az/cyber-defence-lab/" target="_blank">Glasgow Cyber Defence Lab (GCDL)</a>
       and a member of the <a href="https://www.gla.ac.uk/research/az/netlab/" target="_blank">Networked Systems Research Lab (Netlab)</a> in the School of Computing Science
@@ -56,9 +64,20 @@
        normal behaviour profiling and graph-based approaches.
   </p>
 </div>
+<br>
+    <p class="sectionfooter">
+        <button><a href="mailto:marco.cook@glasgow.ac.uk" target="_blank"><img src="images/email_icon.png" style="width: 40px; height: 40px";></a></button>
+        <button><a href="https://orcid.org/0000-0002-5232-2381" target="_blank"><img src="images/orcid_icon.png" style="width: 35px; height: 35px";></a></button>
+        <button><a href="https://www.linkedin.com/in/marco-cook-67a60060/" target="_blank"><img src="images/linkedin_icon.png" style="width: 35px; height: 35px";></a></button>
+    </p>
 
 </section>
 
+<!--////////////////////////////////////////////-->
+<!--////////////////////////////////////////////-->
+        <!--LATEST NEWS SECTION      -->
+<!--////////////////////////////////////////////-->
+<!--////////////////////////////////////////////-->
     <section id="news">
       <h2 class="sectionheading">Latest News</h2>
       <ul class="projects">
@@ -70,43 +89,60 @@
 
     <section id="publications">
         <h2 class="sectionheading">Recent Publications</h2>
-<!--        <p class="sectionheader"><a href="https://scholar.google.com/citations?user=5njYdN8AAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> | <a href="https://www.gla.ac.uk/schools/computing/staff/marcocook/#publications" target="_blank">University Profile</a></p><br>-->
         <ol class="publications-list">
+
+            <!--            Artefact Provenance Paper-->
             <li class="publication-item">
-                <a class="publication-title" href="#modal1">PLCPrint: Fingerprinting Memory Attacks in Programmable Logic Controllers</a>
-
-                <a href="Publications/papers/plcprint_2023.pdf" class="academic-button pdf">PDF</a>
-                <button class="academic-button bibtex" onclick="generateBibtex()">BibTeX</button>
-                <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
+                <a class="publication-title" href="#modal3">Artefact Provenance Graphs for Anomaly Inference in Industrial Control Systems</a> <span class="publication-date">2025</span>
                 <div class="meta-line">
-                    <i><img src="images/journal.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> IEEE Transactions on Information Forensics and Security <span class="publication-date">2023</span>
-                </div>
-                <div class="meta-line">
-                    <i><img src="images/authors.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> Marco M. Cook, Angelos K. Marnerides, Dimitrios Pezaros
-                </div>
-            </li>
-
-            <li class="publication-item">
-                <a class="publication-title" href="#modal2">Artefact Provenance Graphs for Anomaly Inference in Industrial Control Systems</a>
-                <a href="Publications/papers/artefactprovenance_2025.pdf" class="academic-button pdf">PDF</a>
-<!--                <button class="academic-button bibtex" onclick="location.href='#modal3">BibTeX</button>
--->
-
-                <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
-                <div class="meta-line">
-                    <i><img src="images/conference.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> IFIP International Conference on ICT Systems Security and Privacy Protection <span class="publication-date">2025</span>
+                    <i><img src="images/conference.png" style="width: 28px; height: 28px; margin-top: 7px;"></i> IFIP International Conference on ICT Systems Security and Privacy Protection
                 </div>
                 <div class="meta-line">
                     <i><img src="images/authors.png" style="width: 28px; height: 28px; margin-top: 7px;"></i> Marco M. Cook, Dimitrios Pezaros
                 </div>
             </li>
-        </ol>
 
-        <!-- Modal Structure -->
+            <!--            Programmable OT Networks Paper-->
+            <li class="publication-item">
+                <a class="publication-title" href="#modal2">Programmable Data Planes for Increased Digital Resilience in OT Networks</a> <span class="publication-date">2025</span>
+                <div class="meta-line">
+                    <i><img src="images/journal.png" style="width: 28px; height: 28px; margin-top: 7px;"></i> IEEE Communications Magazine
+                </div>
+                <div class="meta-line">
+                    <i><img src="images/authors.png" style="width: 28px; height: 28px; margin-top: 7px;"></i> Filip Holik, Marco M Cook, Xicheng Li, Awais Aziz Shah, Dimitrios Pezaros
+                </div>
+            </li>
+
+<!--            PLCPrint Paper-->
+            <li class="publication-item">
+                <a class="publication-title" href="#modal1">PLCPrint: Fingerprinting Memory Attacks in Programmable Logic Controllers</a><span class="publication-date">2023</span>
+                <div class="meta-line">
+                    <i><img src="images/journal.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> IEEE Transactions on Information Forensics and Security
+                </div>
+                <div class="meta-line">
+                    <i><img src="images/authors.png" style="width: 28px; height: 28px; margin-top: 7px;""></i> Marco M. Cook, Angelos K. Marnerides, Dimitrios Pezaros
+                </div>
+            </li>
+        </ol>
+        <div class = "sectionfooter">
+            <div id="scholarbutton">
+
+           <a href="https://scholar.google.com.tr/citations?user=5njYdN8AAAAJ&hl=en" target="_blank" </a> <button>Google Scholar <i><img src="images/svg/google-scholar.svg" style="width: 30px; height: 30px;"></i></button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+        <!-- Modals -->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
-                <h2>Abstract:</h2>
+                <h2>PLCPrint: Fingerprinting Memory Attacks in Programmable Logic Controllers</h2>
+                <a href="Publications/papers/plcprint_2023.pdf" class="academic-button pdf">PDF</a> <button class="academic-button bibtex" onclick="generateBibtex()">BibTeX</button> <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
+                <h1>Abstract:</h1>
                 <p>Programmable Logic Controllers (PLCs) constitute
                     the functioning basis of Industrial Control Systems (ICS) and
                     hence are often a focal point for attackers to exploit. Previous
@@ -129,29 +165,39 @@
                     performance. In general, we demonstrate that PLCPrint fills
                     the gap in the context of attack technique triaging since this has
                     been a missing element within current ICS forensics schemes.</p>
-                <!-- more modal content -->
+
             </div>
         </div>
 
-        <div id="modal2" class="modal">
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="document.getElementById('modal2').style.display='none'">&times;</span>
+            <h2>Programmable Data Planes for Increased Digital Resilience in OT Networks</h2><a href="Publications/papers/ProgrammableOTNetworks_2025.pdf" class="academic-button pdf">PDF</a>
+            <button class="academic-button bibtex" onclick="location.href='#modal3">BibTeX</button>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10891358" class="academic-button link" target="_blank">View Online</a>
+            <h1>Abstract:</h1>
+            <p>Critical national infrastructure is heavily reliant on operational technology (OT) to monitor and control physical industrial processes. Despite the importance of OT systems, they have inherently been designed to maintain safety assurance rather than mitigate security threats. Recent advances in programmable networks offer highly customizable and flexible solutions for cybersecurity. However, the integration of data plane and network stack programmability into OT environments has not been fully explored. The conventional programmable data plane (PDP) approach based on the P4 language and the reconfigurable match-action tables (RMT) switch model has proven highly effective for data center environments. However, performance is subject to specific target implementations, while the architectural model lacks inherent support for flexible and stateful functionality required by cybersecurity use cases. Alternative (host) network programmability paradigms, such as extended Berkley packet filter (eBPF), are gaining traction as more suitable to OT use cases. In this article, we explore the suitability of PDP and offload technologies for improved digital resilience in OT environments. We provide a comprehensive cross-comparison between PDP solutions and advocate that eBPF-based network programmability can achieve flexible, dynamic, and low-cost in-network functions for digital security and resilience. We present an eBPF-based proof-ofconcept asset discovery service that is compared with alternative solutions. Furthermore, we discuss the OT network security functions enabled through eBPF to address potential future research directions.</p>
+        </div>
+    </div>
+
+        <div id="modal3" class="modal">
             <div class="modal-content">
-                <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
-                <h2>Abstract:</h2>
-                <p>The digitalisation of Critical National Infrastructure (CNI) to improve automation has resulted in the underlying Industrial Control Systems (ICS) becoming increasingly interconnected. This sudden connectivity combined with a lack of inherent security controls in ICS components such as Programmable Logic Controllers (PLCs) has enabled sophisticated cyber adversaries to disrupt physical processes. Detecting and analysing attacks is therefore essential for ICS operators to ensure the continuous availability of critical systems. However, existing research has made limited advances into data provenance for anomalies occurring in ICS networks. This is fundamental for enabling rapid triaging of cyber incidents. In this paper, we introduce a novel vendor-independent approach for representing the behaviour of PLC states using graphs for anomaly detection. Through the modelling of dependencies between memory and network data artefacts, we facilitate the data provenance of different types of PLC attack scenarios using graph-based metrics as a generalisable feature set for accurate state and node classification. We evaluate our approach using two physical ICS testbeds with real PLCs to demonstrate generalisability across industrial vendors and environments. The results reveal high, achieving up to 98.9% and 98.7% accuracy for anomalous state and node detection, respectively.
+                <span class="close-modal" onclick="document.getElementById('modal2').style.display='none'">&times;</span>
+                <h2>Artefact Proveance Graphs for Anomaly Inference in ICS</h2><a href="Publications/papers/artefactprovenance_2025.pdf" class="academic-button pdf">PDF</a> <button class="academic-button bibtex" onclick="location.href='#modal3">BibTeX</button> <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
+                <h1>Abstract:</h1>
+                <p>The digitalisation of Critical National Infrastructure (CNI) to improve automation has resulted in the underlying Industrial Control Systems (ICS) becoming increasingly interconnected. This sudden connectivity combined with a lack of inherent security controls in ICS components such as Programmable Logic Controllers (PLCs) has
+                    enabled sophisticated cyber adversaries to disrupt physical processes. Detecting and analysing attacks is therefore essential for ICS operators to ensure the continuous availability of critical systems. However, existing research has made limited advances into data provenance for anomalies occurring in ICS networks. This is fundamental for enabling rapid triaging
+                    of cyber incidents. In this paper, we introduce a novel vendor-independent approach for representing the behaviour of PLC states using graphs for anomaly detection. Through the modelling of dependencies between memory and network data artefacts, we facilitate the data provenance of different types of PLC attack scenarios using graph-based metrics as a generalisable feature set for accurate state and node classification. We evaluate our approach using two physical ICS testbeds with real PLCs to demonstrate generalisability across industrial vendors and environments. The results reveal high, achieving up to 98.9% and 98.7% accuracy for anomalous state and node detection, respectively.</p>
             </div>
         </div>
-    </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: your.email@university.edu</p>
-      <p><a href="#">Google Scholar</a> · <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
-    </section>
-  </main>
 
-<!--  <footer>-->
-<!--    <p>© 2025 Dr. Your Name</p>-->
-<!--  </footer>-->
+    <section id="scholaractivities">
+        <h2 class="sectionheading">Scholarly Activities</h2>
+        <ul>
+            <li>Item</li>
+        </ul>
+    </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bibtex-parse-js@1.0.1/bibtexParse.min.js"></script>
   <script src="script.js"></script>
