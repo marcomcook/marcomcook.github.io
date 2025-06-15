@@ -18,21 +18,22 @@ body {
   font-size: 20px;
 }
 
-/*section:nth-of-type(odd) {*/
-/*  background-color: #f9f9f9; !* Light gray *!*/
-/*}*/
+section:nth-of-type(odd) {
+  background-color: #ffffff; /* White */
+}
 
-/*section:nth-of-type(even) {*/
-/*  background-color: #ffffff; !* White *!*/
-/*}*/
+section:nth-of-type(even) {
 
-/*body.dark section:nth-of-type(odd) {*/
-/*  background-color: #1e1e1e; !* Dark gray for dark mode *!*/
-/*}*/
+  background-color: rgba(236, 229, 229, 0.38); /* Light gray */
+}
 
-/*body.dark section:nth-of-type(even) {*/
-/*  background-color: #121212; !* Slightly darker *!*/
-/*}*/
+body.dark section:nth-of-type(odd) {
+  background-color: #1e1e1e; /* Dark gray for dark mode */
+}
+
+body.dark section:nth-of-type(even) {
+  background-color: #121212; /* Slightly darker */
+}
 
 section {
   padding: 1rem;
