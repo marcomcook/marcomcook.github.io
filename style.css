@@ -9,13 +9,13 @@
 /* Light Theme (lighter background) */
 body {
   font-family: 'Alegreya Sans';
-  background: #aeb9bf;
-  background: linear-gradient(90deg, rgb(234, 231, 231) 0%, rgb(255, 255, 255) 3%, rgb(255, 255, 255) 50%, rgb(250, 250, 250) 96%, rgba(174, 185, 191, 1) 100%);
+  background: #ffffff;
+  background: linear-gradient(90deg, rgb(195, 192, 192) 0%, rgb(255, 255, 255) 3%, rgb(255, 255, 255) 50%, rgb(250, 250, 250) 96%, rgba(174, 185, 191, 1) 100%);
   color: rgb(50, 50, 50);
   line-height: 1.6;
-  padding: 2rem;
+  padding: 1rem;
   transition: background 0.3s, color 0.3s;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /*section:nth-of-type(odd) {*/
@@ -35,7 +35,7 @@ body {
 /*}*/
 
 section {
-  padding: 2rem;
+  padding: 1rem;
   border-bottom: none; /* Remove the old border if you had one */
   border-radius: 8px;
   margin-bottom: 1.5rem;
@@ -63,63 +63,55 @@ section {
   text-align: center;
 }
 
-.sectionheader a{
-  color: #093859;
-}
 
-.sectionfooter {
+.aboutme-footer {
   font-size: 20px;
   color: #093859;
   text-align: center;
-
-}
-
-.sectionfooter button{
   padding-right: 30px;
-
-}
-
-.sectionfooter a{
-  color: #dbdddd;
-}
-
-.sectionfooter {
-  #scholarbutton{
-
-  display: inline-block;
-  padding: 0.2em 0.5em;
-
-  font-size: 1rem;
-  color: #c5d6ea;
-  background-color: #6d7685;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  }
-
-}
-
-.sectionfooter {
-  #scholarbutton img {
-
-
-  }
-}
-
-
-.sectionfooter button{
-  /*border-radius: 15px;*/
-  /*background: rgba(201, 202, 197, 0.32);*/
-  /*!*padding: 2px;*!*/
-  /*width: 80px;*/
-  /*height: 40px;*/
+  text-align: center;
   background: none;
   border: none;
   cursor: pointer;
   color: inherit;
 
 }
+
+.aboutme-footer button {
+  padding-right: 30px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+
+}
+
+.publications-footer {
+  font-size: 20px;
+  color: #093859;
+  text-align: center;
+  padding-right: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+
+}
+
+.publications-footer button {
+  padding: 5px;
+  text-align: center;
+  background: #c2c8cc;
+  border: black;
+  border-radius: 10%;
+  cursor: pointer;
+  color: #144067;
+
+}
+
+
+
+
 
 .about-me-container {
   display: grid;
@@ -165,21 +157,26 @@ nav a, nav button {
 .profile-container {
   text-align: center;
   margin: 2rem 0 1rem;
+
 }
 
 .profile-wrapper {
   display: flex;
   justify-content: center;
   margin: 1.5rem 0;
+  margin-right: 0.5rem;
+
 }
 
 .profile-pic {
+
   width: 175px;
   height: 225px;
   border-radius: 40%;
   object-fit: cover;
   border: 1px solid #aaa;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-right: 0.5rem;
 }
 
 section {
