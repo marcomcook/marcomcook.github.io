@@ -186,7 +186,7 @@
         <div id="modal3" class="modal">
             <div class="modal-content">
                 <span class="close-modal" onclick="document.getElementById('modal3').style.display='none'">&times;</span>
-                <h2>Artefact Proveance Graphs for Anomaly Inference in ICS</h2><a href="Publications/papers/artefactprovenance_2025.pdf" class="academic-button pdf">PDF</a> <button class="academic-button bibtex" onclick="location.href='#modal3">BibTeX</button> <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
+                <h2>Artefact Proveance Graphs for Anomaly Inference in ICS</h2><a href="Publications/papers/artefactprovenance_2025.pdf" class="academic-button pdf">PDF</a> <button onclick="togglePopup()">BibTex</button> <a href="https://ieeexplore.ieee.org/document/10130481" class="academic-button link" target="_blank">View Online</a>
                 <h1>Abstract:</h1>
                 <p>The digitalisation of Critical National Infrastructure (CNI) to improve automation has resulted in the underlying Industrial Control Systems (ICS) becoming increasingly interconnected. This sudden connectivity combined with a lack of inherent security controls in ICS components such as Programmable Logic Controllers (PLCs) has
                     enabled sophisticated cyber adversaries to disrupt physical processes. Detecting and analysing attacks is therefore essential for ICS operators to ensure the continuous availability of critical systems. However, existing research has made limited advances into data provenance for anomalies occurring in ICS networks. This is fundamental for enabling rapid triaging
@@ -194,6 +194,24 @@
             </div>
         </div>
 
+
+    <!-- Popup inside modal -->
+    <div id="popup" class="popup">
+            <pre><code>
+@article{doe2020example,
+  title={An Example Article},
+  author={Doe, John},
+  journal={Journal of Examples},
+  volume={42},
+  number={1},
+  pages={1--10},
+  year={2020},
+  publisher={Example Publishers}
+}
+</code></pre>
+        </div>
+    </div>
+    </div>
 
     <section id="scholaractivities">
         <h2 class="sectionheading">Scholarly Activities</h2>
@@ -236,5 +254,20 @@
           list.appendChild(listItem);
       });
   </script>
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('popup').style.display = 'none'; // hide popup too
+        }
+
+        function togglePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>

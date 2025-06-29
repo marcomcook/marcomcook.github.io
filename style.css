@@ -351,7 +351,20 @@ section h2 {
   background-color: #2471a3;
 }
 
-
+/* Popup inside modal */
+.popup {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
 
 /* Footer */
 footer {
@@ -374,8 +387,12 @@ body.dark #pub-search {
   border: 1px solid #555;
 }
 
+
+
+
+
 /* Responsive */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   body {
     padding: 1rem;
   }
