@@ -178,7 +178,7 @@ nav a, nav button {
 }
 
 section {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
