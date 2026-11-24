@@ -1,0 +1,487 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans';
+}
+
+/* Light Theme (lighter background) */
+body {
+  font-family: 'Alegreya Sans';
+  background: #ffffff;
+  /*background: linear-gradient(90deg, rgb(195, 192, 192) 0%, rgb(255, 255, 255) 3%, rgb(255, 255, 255) 50%, rgb(250, 250, 250) 96%, rgba(174, 185, 191, 1) 100%);*/
+  color: rgb(50, 50, 50);
+  line-height: 1.6;
+  padding: 1rem;
+  transition: background 0.3s, color 0.3s;
+  font-size: 20px;
+}
+
+section:nth-of-type(odd) {
+  background-color: #ffffff; /* White */
+}
+
+section:nth-of-type(even) {
+
+  background-color: rgba(236, 229, 229, 0.38); /* Light gray */
+}
+
+body.dark section:nth-of-type(odd) {
+  background-color: #1e1e1e; /* Dark gray for dark mode */
+}
+
+body.dark section:nth-of-type(even) {
+  background-color: #121212; /* Slightly darker */
+}
+
+section {
+  padding: 1rem;
+  border-bottom: none; /* Remove the old border if you had one */
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.sectionheading{
+  position: relative;
+  display: inline-block; /* So underline matches content width */
+  padding-bottom: 5px;   /* Space for the underline */
+}
+
+.sectionheading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 40%; /* Controls how much of the heading is underlined */
+  background-color: #2f5771; /* Customize your underline color */
+}
+
+.sectionheader {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+
+.aboutme-footer {
+  font-size: 20px;
+  color: #093859;
+  text-align: center;
+  padding-right: 30px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+
+}
+
+.aboutme-footer button {
+  padding-right: 30px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+
+}
+
+.publications-footer {
+  font-size: 20px;
+  color: #093859;
+  text-align: center;
+  padding-right: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+
+}
+
+.publications-footer button {
+  padding: 5px;
+  text-align: center;
+  background: #c2c8cc;
+  border: black;
+  border-radius: 10%;
+  cursor: pointer;
+  color: #144067;
+
+}
+
+
+.about-me-container {
+  display: grid;
+  align-items: center;
+  /*grid-template-columns: 1.25fr 3fr 0fr;*/
+  column-gap: 10px;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a, nav button {
+  margin: 0 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Profile image */
+.profile-container {
+  text-align: center;
+  margin: 2rem 0 1rem;
+
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  margin-right: 0.5rem;
+
+}
+
+.profile-pic {
+
+  width: 175px;
+  height: 225px;
+  border-radius: 40%;
+  object-fit: cover;
+  border: 1px solid #aaa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-right: 0.5rem;
+}
+
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.projects li,
+.publications li {
+  margin-bottom: 1.5rem;
+}
+
+
+#pub-search {
+  display: block;
+  margin: 1rem auto 2rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Base list styling */
+.publications-list {
+  list-style: decimal inside;
+  padding: 0;
+  font-size: 1.4rem;
+  color: #124f7e;
+}
+
+.publication-item {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1rem;
+  border-bottom: #121212; /* Remove the old border if you had one */
+  border-radius: 8px;
+}
+
+/* Title link */
+.publication-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #124f7e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.publication-title:hover {
+  text-decoration: underline;
+}
+
+/* Date box */
+.publication-date {
+  display: inline-block;
+  background-color: #6b7171;
+  color: #cfdddd;
+  font-size: 1rem;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Metadata lines */
+.meta-line {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 4px;
+  color: #444;
+}
+
+.meta-line i {
+  font-style: normal;
+  margin-right: 6px;
+  color: #888;
+}
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding: 1rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 95%;
+  font-size: 15px;
+  position: relative;
+  text-align: justify;
+}
+
+.modal h2{
+  font-size: 2rem;
+  /*margin-bottom: 1rem;*/
+  text-align: left;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 3rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+/* Base button style */
+.academic-button {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  margin: 0.5em 0.5em 0.5em 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background-color: #2c3e50;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.academic-button:hover {
+  background-color: #1a252f;
+  transform: translateY(-1px);
+}
+
+/* PDF button: deep red for strong action */
+.academic-button.pdf {
+  background-color: #c0392b;
+}
+.academic-button.pdf:hover {
+  background-color: #a93226;
+}
+
+/* BibTeX button: golden-brown tone for reference */
+.academic-button.bibtex {
+  background-color: #d4ac0d;
+  color: #1a1a1a;
+}
+.academic-button.bibtex:hover {
+  background-color: #b7950b;
+}
+
+/* Link/DOI button: neutral blue for navigation */
+.academic-button.link {
+  background-color: #2980b9;
+}
+.academic-button.link:hover {
+  background-color: #2471a3;
+}
+
+/* Popup inside modal */
+.popup {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+body.dark a { color: #90caf9; }
+body.dark footer { color: #aaa; }
+body.dark #pub-search {
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+/* The side banner */
+.side-banner {
+  position: fixed;
+  left: 0;               /* Change to left:0 for left side */
+  top: 0;
+  width: 500px;
+  height: 100vh;          /* Full height */
+  background-image: url("./images/DSC02157.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(100, 100, 100, 0.1);
+  background-blend-mode: lighten;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.side-banner h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: normal;
+
+}
+
+.side-banner-nav-button h3 {
+
+  font-size: 30px;
+  font-weight: normal;
+  border-radius: 30px;
+  border: 1px solid #786c6c;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 2px dotted #b38b0d;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+/* Main content area */
+.content {
+  margin-right: 200px;    /* Prevent overlap with banner */
+  padding: 20px;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+
+  /* Profile image */
+  .profile-container {
+    text-align: center;
+    margin: 2rem 0 1rem;
+
+  }
+
+  .profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    margin-right: 0.5rem;
+
+  }
+  .profile-pic {
+
+    width: 175px;
+    height: 225px;
+    border-radius: 40%;
+    object-fit: cover;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-right: 0.5rem;
+  }
+
+  .about-me-container {
+    display: block;
+    align-items: center;
+    grid-template-columns: 1.25fr 3fr 0fr;
+    column-gap: 5px;
+  }
+}

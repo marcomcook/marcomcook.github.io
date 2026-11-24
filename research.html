@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr. Marco Cook</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <!-- Website logo/name -->
+        <a href="index.html" class="logo">Dr. Marco Cook</a>
+
+        <!-- Navigation links -->
+        <ul class="nav-links">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<main class="research-page">
+
+    <h1>Research</h1>
+
+    <p class="research-intro">
+        My research investigates the security and resilience of
+        critical national infrastructure and cyber-physical systems.
+        I develop intelligent approaches to cyber threat detection,
+        digital forensics, and attack investigation, combining
+        artificial intelligence, data provenance, and system-level
+        analysis to address emerging cybersecurity challenges.
+    </p>
+
+    <nav class="research-shortcuts">
+        <a href="publications.html">Publications</a>
+        <a href="cv.pdf">CV</a>
+    </nav>
+
+
+    <!-- Research Theme 1 -->
+
+    <section class="research-theme">
+
+        <h2>Data Driven Detection, Provenance and Explainability for CNI</h2>
+
+        <p>
+            Operational Technology (OT) and Industrial Control Systems (ICS) underpin essential services
+            across energy, manufacturing, transport, and other
+            Critical National Infrastructure sectors. My research aims to develop novel approaches for multi-modal data fusion strategies to construct richer, more comprehensive behavioural profiles of ICS environments.
+            These enriched profiles not only enable robust detection and explainabilty of deviations from normal operation, but also support deeper characterisation of anomalous behaviour, including how manipulated signals and measurements evolve over time, offering insight into the underlying nature and progression of attacks.
+        </p>
+        <img src="images/ICS_Modalities.png" alt="ICS modalities" style="width:500px;height:350px;">
+        <h3>Recent Papers:</h3>
+
+        <ul class="recent-papers">
+            <li>
+                <a href="https://eprints.gla.ac.uk/383374/2/383374.pdf" target="blank">
+                    Nahalka, Martin, Cook, Marco and Pezaros, Dimitrios, " Heterogeneous Graph Fusion for Multi-Modal Industrial Anomaly Detection ", IEEE International Conference on Cyber Security and Resilience (IEEE CSR), Lisbon, Portugal, 2026
+                </a>
+            </li>
+            <li>
+                <a href="https://eprints.gla.ac.uk/350257/3/350257.pdf" target="blank">
+                    Cook, M.M., Pezaros, D. " Artefact Provenance Graphs for Anomaly Inference in Industrial Control Systems ". IFIP ICT Systems Security and Privacy Protection. SEC, 2025
+                </a>
+            </li>
+            <li>
+                <a href="https://eprints.gla.ac.uk/297746/1/297746.pdf" target="blank">
+                    Cook, Marco M., Angelos K. Marnerides, and Dimitrios Pezaros. "PLCPrint: Fingerprinting memory attacks in programmable logic controllers." IEEE Transactions on Information Forensics and Security (2023)
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- Research Theme 2 -->
+
+    <section class="research-theme">
+
+        <h2>Digital Forensics</h2>
+
+        <p>
+            Data provenance provides a means of understanding how
+            information flows through complex systems and how
+            individual events relate to one another. My research
+            investigates provenance-based security monitoring,
+            attack reconstruction, and digital forensics, using
+            causal relationships between processes, network events,
+            and industrial system artefacts to support the detection
+            and investigation of cyber incidents.
+        </p>
+
+        <h3>Recent Papers:</h3>
+
+        <ul class="recent-papers">
+            <li>
+                <a href="publications.html">
+                    Paper on provenance-based intrusion detection
+                    for operational technology
+                </a>.
+                Author names. Conference or journal, year.
+            </li>
+        </ul>
+
+    </section>
+
+    <footer>
+        &copy; 2026 Marco Cook. All rights reserved.
+    </footer>
+
+</main>

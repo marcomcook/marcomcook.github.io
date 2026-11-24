@@ -1,0 +1,70 @@
+{
+  "publications": [
+    {
+      "year": 2026,
+      "title": "With Power comes Responsibility: Attack Synthesis for\nIndustrial Control Systems using Large Language Models",
+      "authors": [
+        "Marco Cook",
+        "Andrei Stoica",
+        "Awais Shah",
+        "Dimitrios Pezaros"
+      ],
+      "venue": "ACM Transactions on Privacy and Security",
+      "type": "Journal",
+      "abstract": "Large Language Models (LLM) such as ChatGPT, Meta AI, and Google Gemini have become highly accessible and ubiquitous across a wide range of applications, including speech synthesis, code generation, and media content creation. Recent research indicates that an alternative motivation for such tools is to rapidly develop malware to conduct cyber attacks. In this article, we investigate how generative LLM tools can be used to synthesise cyber-attacks targeting Industrial Control Systems (ICS). We introduce a methodology that uses LLMs to generate attack techniques based on the MITRE attack framework to target a variety of Programmable Logic Controllers (PLC) models from by different industrial vendors. We investigate the capability of five leading off-the-shelf LLMs by providing different levels of attacker context to enhance the generation. Through a comprehensive evaluation of the generated code and the resulting LLM outputs, we demonstrate that current general-purpose LLMs are capable of identifying the necessary steps required to synthesise attacks that can manipulate the operations of real PLCs. We highlight that the success of LLM-generated PLC cyberattacks depends on the level of target context initially provided, emphasising the importance of mitigating early-stage reconnaissance attacks in OT environments.",
+      "doi": "https://dl.acm.org/doi/full/10.1145/3815116",
+      "pdf": "https://eprints.gla.ac.uk/384885/3/384885.pdf",
+      "bibtex": "@article{cook2026power,\n  title={With Power comes Responsibility: Attack Synthesis for Industrial Control Systems using Large Language Models},\n  author={Cook, Marco and Stoica, Andrei and Shah, Awais and Pezaros, Dimitrios},\n  journal={ACM Transactions on Privacy and Security},\n  volume={29},\n  number={3},\n  pages={1--31},\n  year={2026},\n  publisher={ACM New York, NY}\n}"
+    },
+    {
+      "year": 2025,
+      "title": "Programmable Data Planes for Increased Digital Resilience in OT Networks",
+      "authors": [
+        "Filip Holik",
+        "Marco Cook",
+        "Xicheng Li",
+        "Awais Shah",
+        "Dimitrios Pezaros"
+      ],
+      "venue": "IEEE Communications Magazine",
+      "type": "journal",
+      "abstract": "Critical national infrastructure is heavily reliant on operational technology (OT) to monitor and control physical industrial processes. Despite the importance of OT systems, they have inherently been designed to maintain safety assurance rather than mitigate security threats. Recent advances in programmable networks offer highly customizable and flexible solutions for cybersecurity. However, the integration of data plane and network stack programmability into OT environments has not been fully explored. The conventional programmable data plane (PDP) approach based on the P4 language and the reconfigurable match-action tables (RMT) switch model has proven highly effective for data center environments. However, performance is subject to specific target implementations, while the architectural model lacks inherent support for flexible and stateful functionality required by cybersecurity use cases. Alternative (host) network programmability paradigms, such as extended Berkley packet filter (eBPF), are gaining traction as more suitable to OT use cases. In this article, we explore the suitability of PDP and offload technologies for improved digital resilience in OT environments. We provide a comprehensive cross-comparison between PDP solutions and advocate that eBPF-based network programmability can achieve flexible, dynamic, and low-cost in-network functions for digital security and resilience. We present an eBPF-based proof-of-concept asset discovery service that is compared with alternative solutions. Furthermore, we discuss the OT network security functions enabled through eBPF to address potential future research directions.",
+      "doi": "https://ieeexplore.ieee.org/abstract/document/10891358",
+      "pdf": "https://eprints.gla.ac.uk/341859/1/341859.pdf",
+      "bibtex": "@article{holik2025programmable,\n  title={Programmable data planes for increased digital resilience in ot networks},\n  author={Holik, Filip and Cook, Marco M and Li, Xicheng and Shah, Awais Aziz and Pezaros, Dimitrios},\n  journal={IEEE Communications Magazine},\n  volume={63},\n  number={7},\n  pages={162--169},\n  year={2025},\n  publisher={IEEE}\n}"
+    },
+
+    {
+      "year": 2023,
+      "title": "PLCPrint: Fingerprinting Memory Attacks in Programmable Logic Controllers",
+      "authors": [
+        "Marco Cook",
+        "Angelos Marnerides",
+        "Dimitrios Pezaros"
+      ],
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "type": "journal",
+      "abstract": "Programmable Logic Controllers (PLCs) constitute the functioning basis of Industrial Control Systems (ICS) and hence are often a focal point for attackers to exploit. Previous attacks have seen PLC memory maliciously altered in order to disrupt the underlying physical process. Different types of memory attack can cause a similar impact on the PLC’s operation and result in indistinguishable physical manifestations. Consequently, delays in triaging attacks through digital forensic practices can induce significant financial loss, physical damage to the infrastructure, and degradation of safety. In this work, we propose PLCPrint, a novel vendor-independent fingerprinting approach that utilises PLC memory artefacts to perform detection and classification of memory attacks. PLCPrint uses PLC memory register mapping, a novel method exploiting the relationship between PLC registers and memory artefacts including the PLC application code. Through this, registers are assigned a Mapping Condition (MC) to indicate how they exist within the PLC memory artefacts. We evaluate the performance of PLCPrint over realistic emulations conducted at a real testbed emulating water filtration and distribution. Through PLCPrint we depict how MC deviations are utilised within supervised learning schemes such as to adequately classify PLC memory attacks with high accuracy performance. In general, we demonstrate that PLCPrint fills the gap in the context of attack technique triaging since this has been a missing element within current ICS forensics schemes.",
+      "doi": "https://ieeexplore.ieee.org/abstract/document/10130481",
+      "pdf": "https://eprints.gla.ac.uk/297746/1/297746.pdf",
+      "bibtex": "@article{cook2023plcprint,\n  title={Plcprint: Fingerprinting memory attacks in programmable logic controllers},\n  author={Cook, Marco M and Marnerides, Angelos K and Pezaros, Dimitrios},\n  journal={IEEE Transactions on Information Forensics and Security},\n  volume={18},\n  pages={3376--3387},\n  year={2023},\n  publisher={IEEE}\n}"
+    },
+
+    {
+      "year": 2023,
+      "title": "A Survey on Industrial Control System Digital Forensics: Challenges, Advances and Future Directions",
+      "authors": [
+        "Marco Cook",
+        "Angelos Marnerides",
+        "Chris Johnson",
+        "Dimitrios Pezaros"
+      ],
+      "venue": "IEEE Surveys and Tutorials",
+      "type": "journal",
+      "abstract": "Operational Technology (OT) systems have become increasingly interconnected and automated, consequently resulting in them becoming targets of cyber attacks, with the threat towards a range of critical national infrastructure (CNI) sectors becoming heightened. This is particularly the case for Industrial Control Systems (ICS), which control and operate the physical processes in CNI sectors such as water treatment, electrical generation and manufacturing. Unlike information technology (IT) systems, ICS have unique cyber-physical characteristics and related safety requirements, making them an attractive target for attacks given the physical consequences that can occur. As a result, the requirement to respond and learn from previous and new attacks is also increasing, with digital forensics playing a significant role in this process. The aim of this paper is to discuss the main issues and existing limitations related to ICS digital forensic. The field of ICS digital forensics is relatively under-developed and does not have the same levels of maturity as IT digital forensics. Although the amount of research on cyber security for ICS is increasing, many unique challenges still exist that pose as barriers to the development and deployment of ICS forensic capabilities. We provide an extensive discussion on these challenges, categorising them into technical, socio-technical, and operational and legal themes. Furthermore, the relationship between these challenge themes as well as the inter-challenge dependencies are also examined. Furthermore, this work discusses ICS forensic advances in relation to the digital forensics life chain, specifically forensic readiness and investigations. The areas of digital forensic training and processes models for ICS are given particular focus. Moreover, we assess the technologies and tools that have been either applied to or developed for ICS components and networks, giving special attention to forensic acquisition and analysis methods. An examination into the specific ICS digital forensic data sources and artefacts is also presented, highlighting that until recently, this was limited to descriptions of generic data formats. In addition, this paper provides an overview of several key ICS attacks, summarising the specific techniques used, data artefacts of interest, and proposing lessons learnt. Finally, this paper presents open discussions on future ICS digital forensics research directions and on-going issues, covering both short and long-term areas that can be addressed to improve the ICS digital forensics capability.",
+      "doi": "https://ieeexplore.ieee.org/document/10100622",
+      "pdf": "https://eprints.gla.ac.uk/341859/1/341859.pdf",
+      "bibtex": "@article{feng2023sizzler,\n  title={Sizzler: Sequential fuzzing in ladder diagrams for vulnerability detection and discovery in programmable logic controllers},\n  author={Feng, Kai and Cook, Marco M and Marnerides, Angelos K},\n  journal={IEEE Transactions on Information Forensics and Security},\n  volume={19},\n  pages={1660--1671},\n  year={2023},\n  publisher={IEEE}\n}"
+    }
+  ]
+}
